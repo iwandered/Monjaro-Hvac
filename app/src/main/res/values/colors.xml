@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 按钮颜色 -->
+    <color name="button_background">#34000000</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="button_background_dark">#222222</color>
+    <color name="button_accent_green">#4CAF50</color>
+    <color name="button_accent_blue">#2196F3</color>
+    <color name="button_accent_yellow">#FFD700</color>
+    <color name="button_accent_red">#FF5555</color>
+    <color name="button_accent_orange">#FF6600</color>
+    <color name="button_accent_cyan">#00BCD4</color>
+    <!-- 欢迎按钮文字颜色（金色） -->
+    <color name="welcome_text">#FFD700</color>
+
+    <!-- 加热/通风颜色 -->
+    <color name="seat_heating_active">#FF6600</color>
+    <color name="seat_ventilation_active">#2196F3</color>
+</resources>

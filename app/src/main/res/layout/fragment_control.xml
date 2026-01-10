@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/car_dashboard_bg"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- 左侧主驾驶区域 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="主驾驶"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- 座椅加热 - 修改布局，1和2档垂直排列 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1.2"
+            android:orientation="horizontal">
+
+            <!-- 加热关闭按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnDrHeatOff"
+                style="@style/CustomButton.Large"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="热" />
+
+            <!-- 3档按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnDrHeat3"
+                style="@style/CustomButton.Large"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="3" />
+
+            <!-- 1和2档垂直排列 - 缩小 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnDrHeat2"
+                    style="@style/CustomButton.ExtraSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btnDrHeat1"
+                    style="@style/CustomButton.ExtraSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:text="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 座椅通风 - 修改布局，1和2档垂直排列 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1.2"
+            android:orientation="horizontal">
+
+            <!-- 通风关闭按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnDrVentOff"
+                style="@style/CustomButton.Large"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="风" />
+
+            <!-- 3档按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnDrVent3"
+                style="@style/CustomButton.Large"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="3" />
+
+            <!-- 1和2档垂直排列 - 缩小 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnDrVent2"
+                    style="@style/CustomButton.ExtraSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btnDrVent1"
+                    style="@style/CustomButton.ExtraSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:text="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 修改：Home、Hvac、Seat三个按钮水平排列 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- Home按钮 -->
+            <Button
+                android:id="@+id/btnHome"
+                style="@style/CustomButton.ExtraLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="2dp"
+                android:text="Home"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Hvac按钮 -->
+            <Button
+                android:id="@+id/btnHvac"
+                style="@style/CustomButton.ExtraLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:text="Hvac"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Seat按钮 -->
+            <Button
+                android:id="@+id/btnSeat"
+                style="@style/CustomButton.ExtraLarge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:text="Seat"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 中间空调控制区域 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <!-- 第一行：内温、风量、外温在同一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 内温显示 - 左 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="内温"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/txtInsideTempValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- 风量显示 - 中 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtFanLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@android:color/white"
+                    android:textSize="64sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- 外温显示 - 右 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="外温"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/txtOutsideTempValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textColor="@android:color/white"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 第二行：Face、Leg、Win三个快捷按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Face按钮 -->
+            <Button
+                android:id="@+id/btnOnlyFace"
+                style="@style/CustomButton.QuickMode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="Face" />
+
+            <!-- Leg按钮 -->
+            <Button
+                android:id="@+id/btnOnlyLeg"
+                style="@style/CustomButton.QuickMode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="Leg" />
+
+            <!-- Win按钮 -->
+            <Button
+                android:id="@+id/btnOnlyWindow"
+                style="@style/CustomButton.QuickMode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="Win" />
+        </LinearLayout>
+
+        <!-- 第三行：面、脚、窗三个风向按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 面按钮 -->
+            <Button
+                android:id="@+id/btnModeFace"
+                style="@style/CustomButton.Medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="面" />
+
+            <!-- 脚按钮 -->
+            <Button
+                android:id="@+id/btnModeLeg"
+                style="@style/CustomButton.Medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="脚" />
+
+            <!-- 窗按钮 -->
+            <Button
+                android:id="@+id/btnModeWindow"
+                style="@style/CustomButton.Medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="窗" />
+        </LinearLayout>
+
+        <!-- 第四行：OFF、AC、AUTO、内外循环、净化按钮（五个按钮） -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- OFF按钮 -->
+            <Button
+                android:id="@+id/btnOff"
+                style="@style/CustomButton.Medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="OFF"
+                android:textColor="#FF5555"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- AC按钮 -->
+            <Button
+                android:id="@+id/btnAcToggle"
+                style="@style/CustomButton.Medium"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="AC" />
+
+            <!-- AUTO按钮 -->
+            <Button
+                android:id="@+id/btnAutoToggle"
+                style="@style/CustomButton.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="AUTO" />
+
+            <!-- 循环按钮 -->
+            <Button
+                android:id="@+id/btnCirculation"
+                style="@style/CustomButton.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="外" />
+
+            <!-- 净化按钮 -->
+            <Button
+                android:id="@+id/btnPurification"
+                style="@style/CustomButton.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="净化" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 右侧副驾驶区域 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="副驾驶"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- 新增：包含欢迎文字和两个控制按钮的容器 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 左侧按钮：副驾驶屏幕开关 -->
+            <Button
+                android:id="@+id/btnPsdToggle"
+                style="@style/CustomButton.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="PSD"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <!-- 欢迎按钮（用于雨刮器服务位置调整） -->
+            <Button
+                android:id="@+id/txtWelcome"
+                style="@style/CustomButton.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:backgroundTint="@color/button_background" />
+
+            <!-- 右侧按钮：副驾驶无人时自动关闭屏幕 -->
+            <Button
+                android:id="@+id/btnAutoPsdControl"
+                style="@style/CustomButton.Small"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="自动"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- More按钮 -->
+        <Button
+            android:id="@+id/btnMore"
+            style="@style/CustomButton.Small"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="More"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <!-- 座椅加热 - 缩小控件，1和2档垂直排列 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="0.6"
+            android:orientation="horizontal">
+
+            <!-- 加热关闭按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnPassHeatOff"
+                style="@style/CustomButton.Large.Passenger"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="热" />
+
+            <!-- 3档按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnPassHeat3"
+                style="@style/CustomButton.Large.Passenger"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="3" />
+
+            <!-- 1和2档垂直排列 - 缩小 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnPassHeat2"
+                    style="@style/CustomButton.ExtraSmall.Passenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btnPassHeat1"
+                    style="@style/CustomButton.ExtraSmall.Passenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:text="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 副驾驶通风 - 修改为2档在上，1档在下 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="horizontal">
+
+            <!-- 通风关闭按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnPassVentOff"
+                style="@style/CustomButton.Large.Passenger"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="风" />
+
+            <!-- 3档按钮 - 放大 -->
+            <Button
+                android:id="@+id/btnPassVent3"
+                style="@style/CustomButton.Large.Passenger"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1.5"
+                android:text="3" />
+
+            <!-- 1和2档垂直排列 - 缩小 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnPassVent2"
+                    style="@style/CustomButton.ExtraSmall.Passenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btnPassVent1"
+                    style="@style/CustomButton.ExtraSmall.Passenger"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:text="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

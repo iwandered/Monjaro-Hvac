@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基础按钮样式 -->
+    <style name="CustomButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/button_background</item>
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- 超大号按钮样式 (主要用于OFF按钮) -->
+    <style name="CustomButton.ExtraLarge" parent="CustomButton">
+        <item name="android:textSize">32sp</item>
+        <item name="android:minHeight">90dp</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <!-- 大号按钮样式 (用于主按钮如热/风/3) -->
+    <style name="CustomButton.Large" parent="CustomButton">
+        <item name="android:textSize">32sp</item>
+        <item name="android:minHeight">80dp</item>
+    </style>
+
+    <!-- 大号按钮样式 (副驾驶) -->
+    <style name="CustomButton.Large.Passenger" parent="CustomButton">
+        <item name="android:textSize">28sp</item>
+        <item name="android:minHeight">70dp</item>
+    </style>
+
+    <!-- 中号按钮样式 (用于空调控制按钮) -->
+    <style name="CustomButton.Medium" parent="CustomButton">
+        <item name="android:textSize">28sp</item>
+        <item name="android:minHeight">70dp</item>
+    </style>
+
+    <!-- 小号按钮样式 (用于空调控制按钮如AUTO/净化) -->
+    <style name="CustomButton.Small" parent="CustomButton">
+        <item name="android:textSize">24sp</item>
+        <item name="android:minHeight">50dp</item>
+    </style>
+
+    <!-- 超小号按钮样式 (用于1/2档位按钮) -->
+    <style name="CustomButton.ExtraSmall" parent="CustomButton">
+        <item name="android:textSize">20sp</item>
+        <item name="android:minHeight">40dp</item>
+    </style>
+
+    <!-- 超小号按钮样式 (副驾驶) -->
+    <style name="CustomButton.ExtraSmall.Passenger" parent="CustomButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:minHeight">35dp</item>
+    </style>
+
+    <!-- 特殊按钮样式: Face/Leg/Win快捷按钮 -->
+    <style name="CustomButton.QuickMode" parent="CustomButton">
+        <item name="android:textSize">24sp</item>
+        <item name="android:minHeight">60dp</item>
+    </style>
+</resources>

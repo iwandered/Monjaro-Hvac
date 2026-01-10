@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">环境面板</string>
+    
+    <!-- 主驾驶座椅 -->
+    <string name="driver_seat">主驾驶</string>
+    <string name="passenger_seat">副驾驶</string>
+    <string name="seat_heating">座椅加热</string>
+    <string name="seat_ventilation">座椅通风</string>
+    <string name="seat_memory">座椅记忆</string>
+    
+    <!-- 空调控制 -->
+    <string name="climate_control">空调控制</string>
+    <string name="fan_speed">风量调节</string>
+    <string name="blowing_mode">出风模式</string>
+    <string name="circulation">循环</string>
+    <string name="inner_circulation">内</string>
+    <string name="outer_circulation">外</string>
+    
+    <!-- 出风模式 -->
+    <string name="mode_face">面</string>
+    <string name="mode_leg">脚</string>
+    <string name="mode_window">窗</string>
+    <string name="mode_cycle">模式切换</string>
+    
+    <!-- 按钮 -->
+    <string name="off">关</string>
+    <string name="level_1">1</string>
+    <string name="level_2">2</string>
+    <string name="level_3">3</string>
+</resources>
